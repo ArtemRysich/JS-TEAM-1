@@ -117,14 +117,22 @@
 
 //. За допомогою циклу for додайте всі парні числа від min до max
 
-const max = 50;
-const min = 0;
-let total = 0;
+// const max = 50;
+// const min = 0;
+// let total = 0;
 
-for (let i = min; i <= max; i += 1) {
-  if (!(i % 2)) {
-    //аналог i%2===0
-    total += i;
-  }
+// for (let i = min; i <= max; i += 1) {
+//   if (!(i % 2)) {
+//     //аналог i%2===0
+//     total += i;
+//   }
+// }
+// console.log(total);
+
+// Потрібно мутувати масив так щоб залишились тільки (імена) елементи типу String.
+ const names = ['Anna', 3, 'Roma', 17, 'Kate', 14, 'Oleg'];
+for(let i=0; i<names.length; i+=1){
+  // if()
+  console.log(typeof names[i])
+
 }
-console.log(total);
