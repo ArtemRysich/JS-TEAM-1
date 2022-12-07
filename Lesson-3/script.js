@@ -14,15 +14,15 @@
 //2 параметр це масив з чоловічими іменами. (mens)
 // Функція повина повертати масив з жіночими іменами.
 
- const users = ['Artem', 'Anna', 'Larisa', 'Maksim', 'Svetlana', 'David', 'Roman', 'Olga'];
- const men = ['Artem', 'Maksim', 'David', 'Roman'];
-const women=[];
-for( const user of users){
-if(!men.includes(user)){
-console.log(user)
-women.push(user) 
-}
-}
-console.log(women)
+//  const users = ['Artem', 'Anna', 'Larisa', 'Maksim', 'Svetlana', 'David', 'Roman', 'Olga'];
+//  const men = ['Artem', 'Maksim', 'David', 'Roman'];
+// const women=[];
+// for( const user of users){
+// if(!men.includes(user)){
+// console.log(user)
+// women.push(user)
+// }
+// }
+// console.log(women)
 
 console.log("helloWorld")
