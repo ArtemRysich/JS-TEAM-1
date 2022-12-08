@@ -136,7 +136,6 @@
 
 // console.log(a);
 
-
 // const result = 12 || 22
 
 // const result = 12 && 22
@@ -145,9 +144,19 @@
 
 // const result = "" && 22
 
-
 // const result = "" || (22 && null)
 
-const result = ("" && 22) || 16
+// const result = ("" && 22) || 16
 
-console.log(result);
+// console.log(result);
+
+function foo() {
+  let message = `I have friends`;
+  const arr = Array.from(arguments);
+  console.log(message + " " + arr.join(", "));
+  return message + " " + arr.join(", ");
+}
+
+foo("Den", "Alex");
+
+foo("Den", "Alex", "David");
