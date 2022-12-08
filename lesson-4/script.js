@@ -4,33 +4,59 @@
 //Використовувати switch()
 
 
-/**
- * 
- * @param {Array} users 
- */
- function stringBuilder(users){
-     switch (users.length) {
-         case 0:
-             console.log("no one likes this");
-             break;
-         case 1:
-             console.log(`${users[0]} likes this`);
-             break;  
-         case 2:
-             console.log(`${users[0]} and ${users[1]} likes this`);
-             break;
-         case 3:
-             console.log(`${users[0]}, ${users[1]} and ${users[2]} likes this`);
-             break;
-         default:
-             console.log(`${users[0]}, ${users[1]} and ${users.length-2} others like this`);
+// /**
+//  * 
+//  * @param {Array} users 
+//  */
+//  function stringBuilder(users){
+//      switch (users.length) {
+//          case 0:
+//              console.log("no one likes this");
+//              break;
+//          case 1:
+//              console.log(`${users[0]} likes this`);
+//              break;  
+//          case 2:
+//              console.log(`${users[0]} and ${users[1]} likes this`);
+//              break;
+//          case 3:
+//              console.log(`${users[0]}, ${users[1]} and ${users[2]} likes this`);
+//              break;
+//          default:
+//              console.log(`${users[0]}, ${users[1]} and ${users.length-2} others like this`);
     
-}
+// }
 
-}
+// }
 
- stringBuilder([])//"no one likes this";
-stringBuilder(["Peter"])//"Peter likes this";
- stringBuilder(["Jacob", "Alex"])//"Jacob and Alex like this";
-stringBuilder(["Max", "John", "Mark"])//"Max, John and Mark like this";
- stringBuilder(["Alex", "Jacob", "Mark", "Max", "Alex", "Jacob", "Mark", "Max"])//"Alex, Jacob and 2 others like this;
+//  stringBuilder([])//"no one likes this";
+// stringBuilder(["Peter"])//"Peter likes this";
+//  stringBuilder(["Jacob", "Alex"])//"Jacob and Alex like this";
+// stringBuilder(["Max", "John", "Mark"])//"Max, John and Mark like this";
+//  stringBuilder(["Alex", "Jacob", "Mark", "Max", "Alex", "Jacob", "Mark", "Max"])//"Alex, Jacob and 2 others like this;
+
+
+// https://habr.com/ru/company/ruvds/blog/599929/
+
+
+// Cтворити функцію яка буде приймати 1 параметр та знаходити в масиві елементи що дублюються і потім ці елменти добавляти в новий масив
+// 1 масив чисел (arr)
+
+const numbers = [1, 2, 3, 1, 1, 2, 17, 19];
+const dubl = [];
+//JS-doka
+/**
+ * для вирахування елеметів, що дублюються.
+ * @param {Array} arr 
+ * @returns {Array} - масив елементів, які дублюються
+ */
+ function getCommonElements(arr) {
+for( let i=0; i <arr.length; i+=1){
+
+    if(arr.includes(arr[i], i+1)){
+dubl.push(arr[i]);
+    }
+}
+return dubl;
+ };
+console.log(getCommonElements(numbers));
