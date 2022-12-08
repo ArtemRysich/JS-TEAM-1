@@ -67,19 +67,71 @@
 
 // const users = ['artem', 'anna', 'maks', 'vlad'];
 
-/**
- *
- * @param {Array} users
- * @param {String} name
- * @returns {Array || String} - масив імен або error msg
- */
+// /**
+//  *
+//  * @param {Array} users
+//  * @param {String} name
+//  * @returns {Array || String} - масив імен або error msg
+//  */
 
-function createUser(users, name) {
-  if (users.includes(name)) {
-    return "Потрібно обрати інше імʼя";
-  }
-  users.push(name);
-  return users;
-}
+// function createUser(users, name) {
+//   if (users.includes(name)) {
+//     return "Потрібно обрати інше імʼя";
+//   }
+//   users.push(name);
+//   return users;
+// }
 
-console.log(createUser(["artem", "anna", "maks", "vlad"], "maks"));
+// console.log(createUser(["artem", "anna", "maks", "vlad"], "maks"));
+
+// let a = 12;
+// if (true) {
+//   let a = 15;
+//   console.log(a);
+// }
+
+// console.log(a);
+
+// let a = 12;
+// if (true) {
+//   let a = 15;
+//   console.log(a);
+// }
+
+// console.log(a);
+
+// let a = 12;
+// if (true) {
+//   a = 15;
+//   console.log(a);
+// }
+
+// console.log(a);
+
+// let a = 12;
+// if (true) {
+//   a = 15;
+//   let a = 22;
+//   console.log(a);
+// }
+
+// console.log(a);
+
+// if (true) {
+//   let a = 22;
+//   console.log(a);
+// }
+
+// console.log(a);
+
+// let a = 22;
+
+// if (true) {
+//   let a = 14;
+//   if (false) {
+//     a = 12;
+//   }
+//   console.log(a);
+// }
+
+// console.log(a);
