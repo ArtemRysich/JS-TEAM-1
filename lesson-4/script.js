@@ -135,3 +135,19 @@
 // }
 
 // console.log(a);
+
+
+// const result = 12 || 22
+
+// const result = 12 && 22
+
+// const result = "" || 22
+
+// const result = "" && 22
+
+
+// const result = "" || (22 && null)
+
+const result = ("" && 22) || 16
+
+console.log(result);
