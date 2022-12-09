@@ -185,20 +185,20 @@
    
    
 // }
+//
+//
+// function isPalindrome(str) {
+//   for (let i = 0; i < str.length / 2; i++) {
+//     if (str[i] !== str[str.length - i - 1]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(isPalindrome("level"));
 
-   
-function isPalindrome(str) {
-  for (let i = 0; i < str.length / 2; i++) {
-    if (str[i] !== str[str.length - i - 1]) {
-      return false;
-    }
-  }
-  return true;
-}
-console.log(isPalindrome("level"));
-
-console.log(isPalindrome('level')); // true
-console.log(isPalindrome('topot')); // true
+// console.log(isPalindrome('level')); // true
+// console.log(isPalindrome('topot')); // true
 // console.log(isPalindrome('вимив')); // true
 // console.log(isPalindrome('анна')); // true
 // console.log(isPalindrome('алла')); // true
@@ -206,9 +206,9 @@ console.log(isPalindrome('topot')); // true
 // console.log(isPalindrome('ротатор')); // true
 // console.log(isPalindrome('радар')); // true
 // console.log(isPalindrome('привіт')); // false
-console.log(isPalindrome('що')); // false
-console.log(isPalindrome('that'));  // false
-
+// console.log(isPalindrome('що')); // false
+// console.log(isPalindrome('that'));  // false
+//
 
 //------------------------
 
@@ -247,28 +247,42 @@ console.log(isPalindrome('that'));  // false
 //------------------------
 
 //  напиши функцію яка буде створювати масив з не унікальних значень в масиві, які є в тестових масивах
-function foo(newArr){
-    const notUnicArr = []
-    for( let i = 0; i < newArr.length; i+=1){
-        if(newArr.includes(newArr[i], i+1))
-        notUnicArr.push(newArr[i])
-    }
-    return notUnicArr
-}
+// function foo(newArr){
+//     const notUnicArr = []
+//     for( let i = 0; i < newArr.length; i+=1){
+//         if(newArr.includes(newArr[i], i+1))
+//         notUnicArr.push(newArr[i])
+//     }
+//     return notUnicArr
+// }
+//
+// const arr1 = [1, 2];
+// const arr2 = [2, 3];
+// const arr3 = ['a', 'b'];
+// const arr4 = ['b', 'c'];
+// const arr5 = ['b', 'e', 'c'];
+// const arr6 = ['b', 'b', 'e'];
+// const arr7 = ['b', 'c', 'e'];
+// const arr8 = ['b', 'e', 'c'];
+// console.log(foo(arr1))
+// console.log(foo(arr2))
+// console.log(foo(arr3))
+// console.log(foo(arr4))
+// console.log(foo(arr5))
+// console.log(foo(arr6))
+// console.log(foo(arr7))
+// console.log(foo(arr8))
 
-const arr1 = [1, 2];
-const arr2 = [2, 3];
-const arr3 = ['a', 'b'];
-const arr4 = ['b', 'c'];
-const arr5 = ['b', 'e', 'c'];
-const arr6 = ['b', 'b', 'e'];
-const arr7 = ['b', 'c', 'e'];
-const arr8 = ['b', 'e', 'c'];
-console.log(foo(arr1))
-console.log(foo(arr2))
-console.log(foo(arr3))
-console.log(foo(arr4))
-console.log(foo(arr5))
-console.log(foo(arr6))
-console.log(foo(arr7))
-console.log(foo(arr8))
+// Потрібно створити функцію яка буде перевіряти чи елементи в масиві розташовані в порядку зростання,
+// якщо ні то замінювати елемент на вірний
+const numbers = [1, 2, 3, 1, 5, 6, 1, 1, 9]
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+function newFun(numbers){
+  for(let i = 0; i <numbers.length; i++ ){
+    if(numbers[i] + 1 !== numbers[i + 1]) {
+      numbers[i +1] = numbers[i] + 1
+    }
+  }
+}
+newFun(numbers)
+console.log(numbers)
