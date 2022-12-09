@@ -160,3 +160,17 @@ function foo() {
 foo("Den", "Alex");
 
 foo("Den", "Alex", "David");
+
+
+// 3. Напишіть функцію squareDigits, яка приймає число та зводить у квадрат кожен символ.
+function squareDigits(number){
+    const str = String(number);
+    const numArr = [];
+const numberArr = str.split("");
+for(let i=0; i<numberArr.length; i+=1){
+    const numPow = Math.pow(numberArr[i], 2);
+     numArr.push(numPow);
+     
+}
+return numArr.join("");
+}
