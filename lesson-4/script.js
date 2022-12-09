@@ -150,27 +150,80 @@
 
 // console.log(result);
 
-function foo() {
-  let message = `I have friends`;
-  const arr = Array.from(arguments);
-  console.log(message + " " + arr.join(", "));
-  return message + " " + arr.join(", ");
-}
+// function foo() {
+//   let message = `I have friends`;
+//   const arr = Array.from(arguments);
+//   console.log(message + " " + arr.join(", "));
+//   return message + " " + arr.join(", ");
+// }
 
-foo("Den", "Alex");
+// foo("Den", "Alex");
 
-foo("Den", "Alex", "David");
+// foo("Den", "Alex", "David");
 
 
 // 3. Напишіть функцію squareDigits, яка приймає число та зводить у квадрат кожен символ.
-function squareDigits(number){
-    const str = String(number);
-    const numArr = [];
-const numberArr = str.split("");
-for(let i=0; i<numberArr.length; i+=1){
-    const numPow = Math.pow(numberArr[i], 2);
-     numArr.push(numPow);
+// function squareDigits(number){
+//     const str = String(number);
+//     const numArr = [];
+// const numberArr = str.split("");
+// for(let i=0; i<numberArr.length; i+=1){
+//     const numPow = Math.pow(numberArr[i], 2);
+//      numArr.push(numPow);
      
-}
-return numArr.join("");
-}
+// }
+// return numArr.join("");
+// }
+
+// 4. Напишіть функцію isPalindrome, яка перевіряє, чи переданий рядок є паліндромом.
+// Паліндром - це слово, фраза чи послідовність, які читаються так само як уперед, назад, наприклад, level.
+
+
+// console.log(isPalindrome('level')); // true
+// console.log(isPalindrome('topot')); // true
+// console.log(isPalindrome('вимив')); // true
+// console.log(isPalindrome('анна')); // true
+// console.log(isPalindrome('алла')); // true
+// console.log(isPalindrome('дід')); // true
+// console.log(isPalindrome('ротатор')); // true
+// console.log(isPalindrome('радар')); // true
+// console.log(isPalindrome('привіт')); // false
+// console.log(isPalindrome('що')); // false
+// console.log(isPalindrome('that'));  // false
+
+
+//------------------------
+
+// 5. Написати функцію stringTransformer, яка буде трансформувати рядок за такими правилами:
+
+// 1) Змінити регістр кожного знака, тобто. нижній регістр у верхній регістр, верхній регістр у нижній регістр. (наприклад 'FizzBuzz'-> 'fIZZbUZZ');
+// 2) Змінити порядок слів на зворотний (наприклад, 'pen pineapple apple PEN' --> 'pen APPLE PINEAPPLE PEN'). // Done
+
+
+// console.log(stringTransformer('torininGEN THE bEst'));
+// BeST the TORININgen
+
+// console.log(stringTransformer('JavaScript IS cool LANGUAGE'));
+// language COOL is jAVAsCRIPT
+
+
+//------------------------
+
+// 6. Реалізувати функцію, яка виконуватиме математичні операції з введеними користувачем числами
+
+// Технічні вимоги:
+
+// Взяти за допомогою модального вікна браузера два числа. ( функцією )
+// Взяти за допомогою модального вікна браузера математичну операцію, яку потрібно здійснити. Сюди можна ввести +, -, *, /. ( функцією )
+// Створити функцію, в якій провести запит чисел, мат. операції та виконати обчислення )
+// Вивести у консоль результат виконання функції.
+//
+// Необов'язкове завдання додаткової складності:
+//
+// Після введення даних додати перевірку їхньої коректності.
+// Якщо користувач не ввів числа, або при введенні вказав не числа - запитати обидва числа заново
+// Якщо користувач вві неправильний символ - запитати ще раз
+
+
+
+//------------------------
