@@ -227,3 +227,30 @@
 
 
 //------------------------
+
+//  напиши функцію яка буде створювати масив з не унікальних значень в масиві, які є в тестових масивах
+function foo(newArr){
+    const notUnicArr = []
+    for( let i = 0; i < newArr.length; i+=1){
+        if(newArr.includes(newArr[i], i+1))
+        notUnicArr.push(newArr[i])
+    }
+    return notUnicArr
+}
+
+const arr1 = [1, 2];
+const arr2 = [2, 3];
+const arr3 = ['a', 'b'];
+const arr4 = ['b', 'c'];
+const arr5 = ['b', 'e', 'c'];
+const arr6 = ['b', 'b', 'e'];
+const arr7 = ['b', 'c', 'e'];
+const arr8 = ['b', 'e', 'c'];
+console.log(foo(arr1))
+console.log(foo(arr2))
+console.log(foo(arr3))
+console.log(foo(arr4))
+console.log(foo(arr5))
+console.log(foo(arr6))
+console.log(foo(arr7))
+console.log(foo(arr8))
