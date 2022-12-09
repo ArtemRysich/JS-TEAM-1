@@ -179,8 +179,26 @@
 // Паліндром - це слово, фраза чи послідовність, які читаються так само як уперед, назад, наприклад, level.
 
 
-// console.log(isPalindrome('level')); // true
-// console.log(isPalindrome('topot')); // true
+//  function isPalindrome(newString) {
+//   // const str = newString.toLowerCase();
+//   // return str === str.split("").reverse().join("");
+   
+   
+// }
+
+   
+function isPalindrome(str) {
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - i - 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isPalindrome("level"));
+
+console.log(isPalindrome('level')); // true
+console.log(isPalindrome('topot')); // true
 // console.log(isPalindrome('вимив')); // true
 // console.log(isPalindrome('анна')); // true
 // console.log(isPalindrome('алла')); // true
@@ -188,8 +206,8 @@
 // console.log(isPalindrome('ротатор')); // true
 // console.log(isPalindrome('радар')); // true
 // console.log(isPalindrome('привіт')); // false
-// console.log(isPalindrome('що')); // false
-// console.log(isPalindrome('that'));  // false
+console.log(isPalindrome('що')); // false
+console.log(isPalindrome('that'));  // false
 
 
 //------------------------
