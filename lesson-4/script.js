@@ -275,14 +275,14 @@
 
 // Потрібно створити функцію яка буде перевіряти чи елементи в масиві розташовані в порядку зростання,
 // якщо ні то замінювати елемент на вірний
-const numbers = [1, 2, 3, 1, 5, 6, 1, 1, 9]
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-function newFun(numbers){
-  for(let i = 0; i <numbers.length; i++ ){
-    if(numbers[i] + 1 !== numbers[i + 1]) {
-      numbers[i +1] = numbers[i] + 1
-    }
-  }
-}
-newFun(numbers)
-console.log(numbers)
+// const numbers = [1, 2, 3, 1, 5, 6, 1, 1, 9]
+// // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// function newFun(numbers){
+//   for(let i = 0; i <numbers.length; i++ ){
+//     if(numbers[i] + 1 !== numbers[i + 1]) {
+//       numbers[i +1] = numbers[i] + 1
+//     }
+//   }
+// }
+// newFun(numbers)
+// console.log(numbers)
