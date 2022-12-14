@@ -150,37 +150,39 @@
 
 // 2 Порахувати вік всіх юзерів у яких є ключ age.
 
-const friends = [
-  { name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
-  { name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
-  { name: "Alice", books: ["War and peace", "Romeo and Juliet"] },
-  {
-    name: "Oleksii",
-    books: ["Bible", "War and peace", "Harry Potter", "Romeo and Juliet"],
-    age: 26,
-  },
-];
+// const friends = [
+//   { name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
+//   { name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
+//   { name: "Alice", books: ["War and peace", "Romeo and Juliet"] },
+//   {
+//     name: "Oleksii",
+//     books: ["Bible", "War and peace", "Harry Potter", "Romeo and Juliet"],
+//     age: 26,
+//   },
+// ];
 
-function sumOfAges(arr) {
-  let sum = 0;
-  for (const elem of arr) {
-    if (elem.hasOwnProperty("age")) {
-      sum += elem.age;
-    }
-  }
-  return sum;
-}
+// function sumOfAges(arr) {
+//   let sum = 0;
+//   for (const elem of arr) {
+//     if (elem.hasOwnProperty("age")) {
+//       sum += elem.age;
+//     }
+//   }
+//   return sum;
+// }
 
-console.log(sumOfAges(friends));
+// console.log(sumOfAges(friends));
 
-function getBook(arr, nameOfBook) {
-  const newArr = [];
-  for (const obj of arr) {
-    if (obj.books.includes(nameOfBook)) {
-      newArr.push(obj.name);
-    }
-  }
-  return newArr.join(", ");
-}
+// function getBook(arr, nameOfBook) {
+//   const newArr = [];
+//   for (const obj of arr) {
+//     if (obj.books.includes(nameOfBook)) {
+//       newArr.push(obj.name);
+//     }
+//   }
+//   return newArr.join(", ");
+// }
 
-console.log(getBook(friends, "Harry Potter"));
+// console.log(getBook(friends, "Harry Potter"));
+
+
