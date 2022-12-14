@@ -130,9 +130,10 @@
 // console.log(total);
 
 // Потрібно мутувати масив так щоб залишились тільки (імена) елементи типу String.
- const names = ['Anna', 3, 'Roma', 17, 'Kate', 14, 'Oleg'];
+/*  const names = ['Anna', 3, 'Roma', 17, 'Kate', 14, 'Oleg'];
 for(let i=0; i<names.length; i+=1){
   // if()
   console.log(typeof names[i])
 
-}
+} */
+

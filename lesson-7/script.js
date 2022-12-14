@@ -32,7 +32,7 @@
 // Маємо масив з переможними комбінаціями (jackpot), а також декілька тестових масивів з ходами наших учасників.
 // Потрібно створити функція яка буде повертати true або false в залежності від того чи ходи учасника співпадають з однією з переможних комбінацій.
 
-const jackpot = [
+/* const jackpot = [
   [1, 2, 3],
   [1, 5, 9],
   [1, 4, 7],
@@ -70,4 +70,41 @@ const player3 = [6, 3, 9]; //true
 
 console.log(winner(player1));
 console.log(winner(player2));
-console.log(winner(player3));
+console.log(winner(player3)); */
+
+/* Визначати в кого була найтриваліша гра, повернути імя гравця */
+const players = [{
+        name: "Mango",
+        playtime: 1270,
+        gamesPlayed: 4
+    },
+    {
+        name: "Poly",
+        playtime: 469,
+        gamesPlayed: 2
+    },
+    {
+        name: "Ajax",
+        playtime: 690,
+        gamesPlayed: 3
+    },
+    {
+        name: "Kiwi",
+        playtime: 241,
+        gamesPlayed: 1
+    },
+];
+const longestPlay = players => {
+  let name = "";
+  let longestTime = 0;
+  for (const player of players) {
+    let play = player.playtime / player.gamesPlayed;
+    if (play > longestTime) {
+      longestTime = play;
+      name = player.name;
+    }
+  }
+  return name;
+}
+longestPlay(players);
+console.log(longestPlay(players))
