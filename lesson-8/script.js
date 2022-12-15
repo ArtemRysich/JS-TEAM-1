@@ -40,3 +40,9 @@ console.log(theMostExpensiveCarName)
 // theMostExpensiveCarPrice = cars[0].price
 // console.log(cars[0])
 // console.log(theMostExpensiveCarPrice)
+
+/* const carArr = cars.map(({ car }) => car)
+console.log(carArr)
+ */
+const carArr = cars.filter(({ price }) => price < 15000).map(({car}) => car)
+console.log(carArr)
