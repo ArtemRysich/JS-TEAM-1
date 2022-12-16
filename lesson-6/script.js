@@ -60,28 +60,60 @@
 
 // Створити функцію яка приймає 1 параметр масив продуктів і повертає мутований масив // Потрібно перебрати масив і якщо він має об'єкти в яких дублюються айді то квонтіті цих елементів потрібно сплюсувати // а ті обє'кти в яких айді співпав видалити з масиву. // (Потрібно мутувати масив, створювати новий не потрібно) // const products = [{ // id: 'sku1', // qty: 1, // }, { // id: 'sku2', // qty: 2, // }, { // id: 'sku3', // qty: 3, // }, { // id: 'sku1', // qty: 6, // }, { // id: 'sku1', // qty: 8, // }, { // id: 'sku2', // qty: 19, // }, { // id: 'sku4', // qty: 1, // }]
 
-const products = [
-  { id: "sku1", qty: 1 },
-  { id: "sku2", qty: 2 },
-  { id: "sku3", qty: 3 },
-  { id: "sku1", qty: 6 },
-  { id: "sku1", qty: 8 },
-  { id: "sku2", qty: 19 },
-  { id: "sku4", qty: 1 },
-];
+// const products = [
+//   { id: "sku1", qty: 1 },
+//   { id: "sku2", qty: 2 },
+//   { id: "sku3", qty: 3 },
+//   { id: "sku1", qty: 6 },
+//   { id: "sku1", qty: 8 },
+//   { id: "sku2", qty: 19 },
+//   { id: "sku4", qty: 1 },
+// ];
 
-function formatObject(products) {
-  for (let i = 0; i < products.length; i += 1) {
-    console.log("Products i ", products[i]);
-    for (let j = i + 1; j < products.length; j += 1) {
-      console.log("Products j ", products[j]);
-      if (products[i].id === products[j].id) {
-        products[i].qty += products[j].qty;
-        products.splice(j, 1);
-        j -= 1;
-      }
-    }
-  }
-}
-console.log(formatObject(products));
-console.log(products);
+// function formatObject(products) {
+//   for (let i = 0; i < products.length; i += 1) {
+//     console.log("Products i ", products[i]);
+//     for (let j = i + 1; j < products.length; j += 1) {
+//       console.log("Products j ", products[j]);
+//       if (products[i].id === products[j].id) {
+//         products[i].qty += products[j].qty;
+//         products.splice(j, 1);
+//         j -= 1;
+//       }
+//     }
+//   }
+// }
+// console.log(formatObject(products));
+// console.log(products);
+
+
+// const cars = [{
+//         car: "Honda",
+//         type: "Civic",
+//         price: 12000,
+//     },
+//     {
+//         car: "Audi",
+//         type: "Q7",
+//         price: 40000,
+//     },
+//     {
+//         car: "BMW",
+//         type: "5 siries",
+//         price: 9000,
+const friends = [{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
+    { name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
+    { name: "Alice", books: ["War and peace", "Romeo and Juliet"]},
+    { name: "Oleksii", books: ["Bible","War and peace","Harry Potter",  "Romeo and Juliet"], age: 26},
+]
+ 
+// const result = friends.reduce((acc, itemElem, ind, arr) => {
+//   if(itemElem.hasOwnProperty("age")){
+// acc += itemElem.age;
+// }
+// return acc;
+// },0 )
+// console.log(result)
+
+const result = friends.reduce((acc, itemElem) => itemElem.hasOwnProperty("age") ? acc + itemElem.age : acc, 0)
+console.log(result)
