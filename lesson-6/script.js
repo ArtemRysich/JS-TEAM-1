@@ -101,7 +101,7 @@
 //         car: "BMW",
 //         type: "5 siries",
 //         price: 9000,
-const friends = [{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
+/* const friends = [{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
     { name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
     { name: "Alice", books: ["War and peace", "Romeo and Juliet"]},
     { name: "Oleksii", books: ["Bible","War and peace","Harry Potter",  "Romeo and Juliet"], age: 26},
@@ -117,3 +117,60 @@ const friends = [{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
 
 const result = friends.reduce((acc, itemElem) => itemElem.hasOwnProperty("age") ? acc + itemElem.age : acc, 0)
 console.log(result)
+ */
+const cars = [{
+        car: "Honda",
+        type: "Civic",
+        price: 12000,
+    },
+    {
+        car: "Audi",
+        type: "Q7",
+        price: 40000,
+    },
+    {
+        car: "BMW",
+        type: "5 siries",
+        price: 9000,
+    },
+    {
+        car: "Honda",
+        type: "Accord",
+        price: 20000,
+    },
+    {
+        car: "Volvo",
+        type: "XC60",
+        price: 7000,
+    },
+];
+
+/* const allCars = cars.reduce((acc, item) => {
+    acc.push(item.car);
+    return acc;
+}, [])
+ console.log(allCars) */
+
+/* Цей метод викличе помилку через неявне повернення:
+ const allCars = cars.reduce((acc, item) => acc.push(item.car), [])
+ console.log(allCars) */
+
+ / ///Створити функцію яка приймає марку авто, функція повертає в консоль кількість знайдених авто , марку авто, модель і вартість авто
+// // // Повертає стрінгу з знайденими авто
+
+// // // Кількість знайдених автомобілів 2:
+// // // 1. Honda Accord, ціна 20000
+// // // 2. Honda Civic, ціна 12000
+
+// // // // Якщо не було знайдено жодного авто ми маємо вивести
+
+// // // // Вибачте але за вашим пошуком жодного авто не було знайдено.
+
+const searchCars = (carName) => {
+    const result = cars.filter(({ car }) => car === carName);
+    console.log(result)
+    const resultMark = result.reduce((acc, elm, ind) => acc + `${ind + 1} ${elm.car} ${elm.type}, ціна ${elm.price}\n`,
+        result.length ? `Кількість знайдених автомобілів ${result.length}\n` : 'Вибачте але за вашим пошуком жодного авто не було знайдено')  
+    console.log(resultMark)
+}
+searchCars("Audi")
