@@ -40,12 +40,29 @@
 // }
 
 
-const input = document.querySelector('.js-input')
-const title = document.querySelector('.js-title')
-input.addEventListener("input", onInput)
+// const input = document.querySelector('.js-input')
+// const title = document.querySelector('.js-title')
+// input.addEventListener("input", onInput)
 
-function onInput(event) {
-  if (event.currentTarget.value.length > 15) {
-    title.textContent = 'Welcome'
-  }
+// function onInput(event) {
+//   if (event.currentTarget.value.length > 15) {
+//     title.textContent = 'Welcome'
+//   }
+// }
+
+
+
+
+const formOne = document.querySelector('.js-form-one');
+formOne.addEventListener('submit', onForm);
+
+function onForm(evt) {
+
+    evt.preventDefault()
+    const { search, qwery } = evt.currentTarget.elements;
+    
+    console.log(search.value, qwery.value);
+    console.dir(evt.currentTarget.elements);
 }
+
+
