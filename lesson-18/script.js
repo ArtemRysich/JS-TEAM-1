@@ -46,3 +46,14 @@ function createPromise(win, lose, delay) {
   });
   return promise;
 }
+
+// const promise = fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+// promise
+//   .then((resp) => {
+//     if (!resp.ok) {
+//       throw new Error("404");
+//     }
+//     return resp.json();
+//   })
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
