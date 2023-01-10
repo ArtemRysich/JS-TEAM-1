@@ -29,13 +29,13 @@
 //                 <button class="js-favourite">Add to favourite</button>
 //             </div>
 //         </li>`
-       
+
 //     }).join("");
 
 //     return markup;
 // }
 
-// container.insertAdjacentHTML("beforeend", createMarkup(instruments));  
+// container.insertAdjacentHTML("beforeend", createMarkup(instruments));
 
 // container.addEventListener("click", onClick);
 
@@ -51,17 +51,16 @@
 //    }
 // }
 const divEl = document.querySelector(".content");
- let markup = "";
- for ( let i = 0; i < 9; i +=1){
-markup +=`<div class="item"></div>`;
- }
+let markup = "";
+for (let i = 0; i < 9; i += 1) {
+  markup += `<div class="item"></div>`;
+}
 divEl.insertAdjacentHTML("beforeend", markup);
 divEl.addEventListener("click", onClick);
-let pleyer ="X";
+let pleyer = "X";
 function onClick(evt) {
-    if(!evt.target.textContent){
+  if (!evt.target.textContent) {
     evt.target.textContent = pleyer;
-    pleyer = pleyer==="X" ? "O" : "X";
-    }
-
+    pleyer = pleyer === "X" ? "O" : "X";
+  }
 }
