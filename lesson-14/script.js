@@ -62,37 +62,37 @@ function createMarkup(arr) {
 }
  createMarkup(cars);
 
- const form = document.querySelector('.js-gallery');
-form.addEventListener('submit', onSubmit);
+//  const form = document.querySelector('.js-gallery');
+// form.addEventListener('submit', onSubmit);
 
-function onSubmit (event) {
-    event.preventDefault();
-    const searchValue = event.target.elements.search.value.toLowerCase();
+// function onSubmit (event) {
+//     event.preventDefault();
+//     const searchValue = event.target.elements.search.value.toLowerCase();
     
-    const filteredCars = cars.filter(({brand}) => brand.toLowerCase().includes(searchValue));   
+//     const filteredCars = cars.filter(({brand}) => brand.toLowerCase().includes(searchValue));   
 
-    createMarkup(filteredCars);
-}
+//     createMarkup(filteredCars);
+// }
 
-list.addEventListener('click',showImg);
+// list.addEventListener('click',showImg);
 
-function showImg (event) {
-    if (event.target.nodeName !== 'IMG'){
-    return
-}
-const {src} = event.target;
+// function showImg (event) {
+//     if (event.target.nodeName !== 'IMG'){
+//     return
+// }
+// const {src} = event.target;
 
-const instance = basicLightbox.create(`
-<img src="${src}" alt="car">
-`, {
-	onShow: (instance) => {document.addEventListener("keydown", onEscape)},
+// const instance = basicLightbox.create(`
+// <img src="${src}" alt="car">
+// `, {
+// 	onShow: (instance) => {document.addEventListener("keydown", onEscape)},
 	
-	onClose: (instance) => {document.removeEventListener("keydown", onEscape)}
-})
-instance.show();
-function onEscape (event) {
-    if (event.code === 'Escape') {
-        instance.close();
-    }
-}
-}
+// 	onClose: (instance) => {document.removeEventListener("keydown", onEscape)}
+// })
+// instance.show();
+// function onEscape (event) {
+//     if (event.code === 'Escape') {
+//         instance.close();
+//     }
+// }
+// }
